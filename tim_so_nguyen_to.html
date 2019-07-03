@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        function kiem_tra_snt(n)
+        {
+            var flag = true;
+            if (n < 2){
+                flag = false;
+            }
+            else{
+                for (var i = 2; i < n-1; i++)
+                {
+                    if (n % i == 0){
+                        flag = false;
+                        break;
+                    }
+                }
+            }
+            return flag;
+        }
+        let i;
+        for (i=0;i<10000;i++){
+            if (kiem_tra_snt(i)){
+                document.write(i + "<br/> ");
+            }
+        }
+
+
+    </script>
+</body>
+</html>
